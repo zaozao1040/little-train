@@ -9,6 +9,7 @@ router.post('/login', function(req, res, next) {
   console.log('result',result)
   return result.then(data=>{
     if(data.phone_number){
+      
       //设置session
       req.session.phoneNumber = data.phone_number
       req.session.userName = data.user_name
